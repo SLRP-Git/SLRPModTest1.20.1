@@ -1,0 +1,18 @@
+{
+  "__comment3__": "Adding name to Items",
+
+  "item.slrpmod.skero": "Skero",
+  "item.slrpmod.sapphire": "Sapphire",
+
+  "__comment2__": "Adding name to Blocks",
+
+  "block.slrpmod.sapphire_block": "Sapphire Block",
+  "block.slrpmod.skero_block": "Skero Block",
+
+  "__comment3__": "Adding name to Creative Tab",
+
+  "creativetab.slrp_tab": "SLRP Tab",
+
+
+  "__comment1__": "Adds Name to every Item/Entity/CreativeTab/Block. Basically Manage whole language for Modded Things"
+}

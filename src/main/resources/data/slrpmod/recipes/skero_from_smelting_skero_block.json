@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 20,
+  "experience": 10,
+  "ingredient": {
+    "item": "slrpmod:skero_block"
+  },
+  "result": "slrpmod:skero"
+}

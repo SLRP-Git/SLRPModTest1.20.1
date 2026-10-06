@@ -1,0 +1,8 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "slrpmod:item/sapphire"
+  },
+  "__comment1__": "basic template for rendering item texture thats 2D",
+  "__comment2__": "item/generated mean it generated the image to 3D perspective"
+}

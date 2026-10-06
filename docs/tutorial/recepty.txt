@@ -1,0 +1,26 @@
+Recepty basically fungujou uplně jednoduše stačí je jebnout do recepts a případně kopírovat recepty z
+external libraries. kde jsou vypsané všechny mc recepty,
+jedinej problém je že tag je na všechny typy tagu jako třeba oak_plank,
+spruce_plank. takže jedinej problém je že se musí tag prohodit za item.
+
+následně tam je category tam je určený jenom typ receptu jenom do craftingu. nic duležitého
+tvar craftingu je určený "type": "minecraft:crafting_shaped".
+tohle je určený
+
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+
+  kde je # tam musí být daný item přiřazený k #.
+    "key": {
+      "#": {
+        "item": "slrpmod:sapphire"
+      }
+    },
+
+a následný výsledek.
+  "result": {
+    "item": "slrpmod:sapphire_block"
+  },
