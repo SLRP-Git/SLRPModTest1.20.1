@@ -1,9 +1,11 @@
 package net.slrp.slrpmod.block;
 
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -20,11 +22,17 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, SLRPSHITMOD.MOD_ID);
 
-    //Creates Unique Object sapphire_block with Properties of IronBlock with sound of Amethyst
+    //Creates Unique Block Object sapphire_block with Properties of IronBlock with sound of Amethyst
     public static final RegistryObject<Block> SAPPHIRE_BLOCK = registryObject("sapphire_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> SKERO_BLOCK = registryObject("skero_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AZALEA_LEAVES)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.AZALEA_LEAVES).sound(SoundType.AZALEA_LEAVES)));
+
+    //Creates Ore Block with expirience and acting as a stone
+    public static final RegistryObject<Block> SAPPHIRE_ORE = registryObject("sapphire_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+                    .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(3,6)));
+
 
     //First Register Block, Second Line Register the Block Item, Third Return The Block
     private static <T extends Block> RegistryObject<T> registryObject(String name, Supplier<T> block) {

@@ -1,0 +1,109 @@
+v mineable data složce jsou data co vše daný nástroj může vykopat
+
+netherite je v jiné složce než ostatní typy nástrojů (forge/tags/blocks/needs_netherite_tool.json)
+ostatní (minecraft/tags/blocks/needs_iron_tool.json) needs_iron_tool.json, needs_stone_tool.json, needs_diamond_tool.json
+musí se taky vyplnit typ nástroje v mineable (minecraft/tags/blocks/mineable/pickaxe.json) pickaxe.json, hoe.json, axe.json, shovel.json
+--
+{
+  "values": [
+    "slrpmod:sapphire_block",
+    "slrpmod:sapphire_ore"
+  ]
+}
+
+
+basically tohle je potřeba přidat do registru blocku k danému blocku aby to vyžadovalo nástroj,
+ pokuď není properties blocku zkopírovaná od jiného ".requiresCorrectToolForDrops()"
+a ještě xp k tomu pokud chceš celej example: je v bloky.txt
+
+
+pokud se vyžaduje silk_touch nebo fortune to se zadává přímo do lootablu
+
+slrpmod/loot_tables/blocks/sapphire_ore.json / komplikovaná varianta ale basically univerzal pro orečka
+
+--
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "enchantments": [
+                      {
+                        "enchantment": "minecraft:silk_touch",
+                        "levels": {
+                          "min": 1
+                        }
+                      }
+                    ]
+                  }
+                }
+              ],
+              "name": "slrpmod:sapphire_ore"
+            },
+            {
+              "type": "minecraft:item",
+              "functions": [
+                {
+                  "add": false,
+                  "count": {
+                    "type": "minecraft:uniform",
+                    "max": 5.0,
+                    "min": 2.0
+                  },
+                  "function": "minecraft:set_count"
+                },
+                {
+                  "enchantment": "minecraft:fortune",
+                  "formula": "minecraft:ore_drops",
+                  "function": "minecraft:apply_bonus"
+                },
+                {
+                  "function": "minecraft:explosion_decay"
+                }
+              ],
+              "name": "slrpmod:sapphire"
+            }
+          ]
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "slrpmod:blocks/sapphire_ore"
+}
+
+jednoduší varianta
+
+--
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "slrpmod:sapphire_block"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "slrpmod:sapphire_block"
+}
+

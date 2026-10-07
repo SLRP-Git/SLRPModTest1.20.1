@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "slrpmod:block/sapphire_ore"
+  },
+  "__comment1__": "set up to be a block from all sides to use one side texture"
+}

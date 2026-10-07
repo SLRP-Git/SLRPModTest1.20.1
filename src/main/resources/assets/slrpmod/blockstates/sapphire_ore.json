@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "slrpmod:block/sapphire_ore"
+    }
+  },
+  "__comment3__": "connect block data, example: data textures"
+}

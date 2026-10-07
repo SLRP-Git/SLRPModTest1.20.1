@@ -33,6 +33,12 @@ slrp/slrpmod/block/ModBlocks.java / Basic Register system pro blocky
         }
     }
 
+pokud člověk chce tak si může přidat expirience block kterej dá xp při správnem vykopání vyžaduje loottable
+    //Creates Ore Block with expirience and acting as a stone and strength 2x stone
+    public static final RegistryObject<Block> SAPPHIRE_ORE = registryObject("sapphire_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+                    .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(3,6)));
+
 java/net/slrp/slrpmod/SLRPSHITMOD.java / Import do rootu javy
 (Přidává se do public SLRPSHITMOD(FMLJavaModLoadingContext context) kde je basically bus)
 --

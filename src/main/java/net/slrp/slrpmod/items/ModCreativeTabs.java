@@ -27,6 +27,7 @@ public class ModCreativeTabs {
                         pOutput.accept(ModItems.SKERO.get());
 
                         //Adding Blocks to the tab
+                        pOutput.accept(ModBlocks.SAPPHIRE_ORE.get());
                         pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
                         pOutput.accept(ModBlocks.SKERO_BLOCK.get());
                     }))

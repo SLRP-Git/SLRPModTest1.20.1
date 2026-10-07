@@ -1,5 +1,6 @@
 dopsat tutorials (firstbuildsetup)
-loottables
 eggs
 trello
 přesunout creativetab java do custom directory a upravit txt
+udělat crop for skero, zároven udělat skero a udělat skero block jako pytel skera, a následně udělat crafting na skero.
+přidat raw sapphire s vypíkáním a drop from sapphire ore
