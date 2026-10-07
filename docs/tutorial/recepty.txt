@@ -7,13 +7,18 @@ následně tam je category tam je určený jenom typ receptu jenom do craftingu.
 tvar craftingu je určený "type": "minecraft:crafting_shaped".
 tohle je určený
 
+(cesta: data/slrpmod/recipes)
+
+typ paternu # = item, může být jaký koliv jiný znak ale musí být přiřazen a empty space je air/nic
+--
   "pattern": [
     "###",
     "###",
     "###"
   ],
 
-  kde je # tam musí být daný item přiřazený k #.
+kde je # tam musí být daný item přiřazený k #.
+--
     "key": {
       "#": {
         "item": "slrpmod:sapphire"
@@ -21,6 +26,7 @@ tohle je určený
     },
 
 a následný výsledek.
+--
   "result": {
     "item": "slrpmod:sapphire_block"
   },

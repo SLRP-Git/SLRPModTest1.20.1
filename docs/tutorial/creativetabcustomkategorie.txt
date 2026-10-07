@@ -1,0 +1,45 @@
+slrpmod/items/ModCreativeTabs.java / vytvoření custom creative tabu
+--
+    public class ModCreativeTabs {
+
+        //Creates register for new creative tab
+        public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
+                DeferredRegister.create(Registries.CREATIVE_MODE_TAB, SLRPSHITMOD.MOD_ID);
+
+        //Adds Icon thats item and items to the tab
+        public static final RegistryObject<CreativeModeTab> SLRP_TAB = CREATIVE_MODE_TABS.register("slrp_tab",
+                () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SKERO.get()))
+                        .title(Component.translatable("creativetab.slrp_tab"))
+                        .displayItems(((pParameters, pOutput) -> {
+                            //Adding Items to the tab
+                            pOutput.accept(ModItems.SAPPHIRE.get());
+                            pOutput.accept(ModItems.SKERO.get());
+
+                            //Adding Blocks to the tab
+                            pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
+                            pOutput.accept(ModBlocks.SKERO_BLOCK.get());
+                        }))
+                        .build());
+
+        //Register the tab to bus in main java (SLRPSHITMOD)
+        public static void register(IEventBus eventBus) {
+            CREATIVE_MODE_TABS.register(eventBus);
+        }
+    }
+
+java/net/slrp/slrpmod/SLRPSHITMOD.java / registrování do root javy (přidává se do části kde je bus stejně jako items,blocky a pod.)
+--
+    // Register the custom creative tab
+    ModCreativeTabs.register(modEventBus);
+
+java/net/slrp/slrpmod/SLRPSHITMOD.java / Přidávání itemu do existujícího vannila tabu (void addCreative by měl už stockově existovat)
+--
+    // Add the example block item to the building blocks tab
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        // Adds Items to Creative Tab Ingredients
+        //only as a example not used right now
+        //if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            //event.accept(ModItems.SKERO);
+            //event.accept(ModItems.SAPPHIRE);
+        //}
+    }

@@ -60,12 +60,7 @@ public class SLRPSHITMOD
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        // Adds Items to Creative Tab Ingredients
-        //only as a example not used right now
-        //if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            //event.accept(ModItems.SKERO);
-            //event.accept(ModItems.SAPPHIRE);
-        //}
+
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

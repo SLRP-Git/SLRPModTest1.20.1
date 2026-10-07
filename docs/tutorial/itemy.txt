@@ -1,0 +1,52 @@
+
+java/net/slrp/slrpmod/items/ModItems.java / Přidání Itemu do Registru
+--
+    public class ModItems {
+        //Register ModItems
+        public static final DeferredRegister<Item> ITEMS =
+                DeferredRegister.create(ForgeRegistries.ITEMS, SLRPSHITMOD.MOD_ID);
+
+        //Register SKERO Item to ModItems
+        public static final RegistryObject<Item> SKERO = ITEMS.register("skero",
+                () -> new Item(new Item.Properties()));
+        //Register SAPPHIRE Item to ModItems
+        public static final RegistryObject<Item> SAPPHIRE = ITEMS.register("sapphire",
+                () -> new Item(new Item.Properties()));
+
+        //Register Items to main java (SLRPSHITMOD)
+        public static void register(IEventBus eventBus) {
+            ITEMS.register(eventBus);
+        }
+    }
+
+java/net/slrp/slrpmod/SLRPSHITMOD.java / Přidání ModItemu do Root Javy
+(Přidává se do public SLRPSHITMOD(FMLJavaModLoadingContext context) kde je basically bus)
+--
+    // Register the custom items
+    ModItems.register(modEventBus);
+
+lang/en_us.json / file for language
+Adding name to Items
+--
+    "item.slrpmod.skero": "Skero",
+    "item.slrpmod.sapphire": "Sapphire",
+
+models/item/sapphire.json / setting up where is texture and how its rendered
+--
+    {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": "slrpmod:item/sapphire"
+      },
+      "__comment1__": "basic template for rendering item texture thats 2D",
+      "__comment2__": "item/generated mean it generated the image to 3D perspective"
+    }
+
+textura pro item
+--
+    textures/item/sapphire.png
+
+java/net/slrp/slrpmod/items/ModCreativeTabs.java /přidání do creative tabu (víc v creativetabcustomkategorie.txt)
+--
+    pOutput.accept(ModItems.SAPPHIRE.get());
+    pOutput.accept(ModItems.SKERO.get());

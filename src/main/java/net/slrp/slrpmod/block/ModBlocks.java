@@ -24,7 +24,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> SAPPHIRE_BLOCK = registryObject("sapphire_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> SKERO_BLOCK = registryObject("skero_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AZALEA_LEAVES)));
 
     //First Register Block, Second Line Register the Block Item, Third Return The Block
     private static <T extends Block> RegistryObject<T> registryObject(String name, Supplier<T> block) {

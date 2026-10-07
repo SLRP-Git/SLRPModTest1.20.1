@@ -1,0 +1,74 @@
+
+slrp/slrpmod/block/ModBlocks.java / Basic Register system pro blocky
+(není tam vše co se dá ovladat, ale když se inspekte typ blocku z vanilly,
+ tak jsou tam vypsané všechny hodnoty co člověk může přidat jako ve stylu soundtypu)
+
+--
+    public class ModBlocks {
+        //Creates Blocks for forge register
+        public static final DeferredRegister<Block> BLOCKS =
+                DeferredRegister.create(ForgeRegistries.BLOCKS, SLRPSHITMOD.MOD_ID);
+
+        //Creates Unique Object sapphire_block with Properties of IronBlock with sound of Amethyst
+        public static final RegistryObject<Block> SAPPHIRE_BLOCK = registryObject("sapphire_block",
+                () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+        public static final RegistryObject<Block> SKERO_BLOCK = registryObject("skero_block",
+                () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AZALEA_LEAVES)));
+
+        //First Register Block, Second Line Register the Block Item, Third Return The Block
+        private static <T extends Block> RegistryObject<T> registryObject(String name, Supplier<T> block) {
+            RegistryObject<T> toReturn = BLOCKS.register(name, block);
+            registerBlockItem(name, toReturn);
+            return toReturn;
+        }
+
+        //Register it to items because it doesnt exist as item it self
+        private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
+            return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        }
+
+        //Send It to eventBus for main java to read
+        public static void register(IEventBus eventBus) {
+            BLOCKS.register(eventBus);
+        }
+    }
+
+java/net/slrp/slrpmod/SLRPSHITMOD.java / Import do rootu javy
+(Přidává se do public SLRPSHITMOD(FMLJavaModLoadingContext context) kde je basically bus)
+--
+    // Register the custom blocks
+    ModBlocks.register(modEventBus);
+
+slrpmod/blockstates/sapphire_block.json / Propojí data k datum textury
+--
+    {
+      "variants": {
+        "": {
+          "model": "slrpmod:block/sapphire_block"
+        }
+      },
+      "__comment3__": "connect block data, example: data textures"
+    }
+
+slrpmod/models/block/sapphire_block.json / Přiřadí texturu (typ kde je textura použitá na všech stranách stejně)
+--
+    {
+      "parent": "minecraft:block/cube_all",
+      "textures": {
+        "all": "slrpmod:block/sapphire_block"
+      },
+      "__comment1__": "set up to be a block from all sides to use one side texture"
+    }
+
+Pozice textury
+--
+textures/block/sapphire_block.png
+
+lang/en_us.json / přidání názvu do jazyku
+--
+    "block.slrpmod.sapphire_block": "Sapphire Block",
+
+přidání do custom creative tabu
+--
+    pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
+    pOutput.accept(ModBlocks.SKERO_BLOCK.get());
