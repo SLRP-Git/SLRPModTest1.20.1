@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "slrpmod:palice"
+    }
+  },
+  "result": {
+    "item": "slrpmod:palice_block"
+  },
+  "__comment1__": "# stand for where the items need to be and what the item is in Key part, can be changed to other symbol (shaped crafting)"
+}

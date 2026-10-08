@@ -10,6 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.slrp.slrpmod.SLRPSHITMOD;
 import net.slrp.slrpmod.block.ModBlocks;
+import net.slrp.slrpmod.items.tools.MetalDetectorItem;
 
 public class ModCreativeTabs {
 
@@ -25,11 +26,16 @@ public class ModCreativeTabs {
                         //Adding Items to the tab
                         pOutput.accept(ModItems.SAPPHIRE.get());
                         pOutput.accept(ModItems.SKERO.get());
+                        pOutput.accept(ModItems.RAW_SAPPHIRE.get());
+                        pOutput.accept(ModItems.PALICE.get());
+
+                        //Adding Tools to the tab
+                        pOutput.accept(ModItems.METAL_DETECTOR.get());
 
                         //Adding Blocks to the tab
                         pOutput.accept(ModBlocks.SAPPHIRE_ORE.get());
                         pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
-                        pOutput.accept(ModBlocks.SKERO_BLOCK.get());
+                        pOutput.accept(ModBlocks.PALICE_BLOCK.get());
                     }))
                     .build());
 

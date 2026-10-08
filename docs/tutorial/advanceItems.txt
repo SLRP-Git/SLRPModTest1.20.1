@@ -1,0 +1,3 @@
+je to stejný hovno jako itemy jenom doporučuju to psát do samostatný javy, příklad je v items/tools/metaldetector
+je celej popsanej a zapisuje se stejně jako klasický itemy příklad je ve stejných místech co itemy basically.
+jedinej rozdíl že to má vlastní script

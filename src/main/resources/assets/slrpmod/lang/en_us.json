@@ -1,16 +1,21 @@
 {
-  "__comment3__": "Adding name to Items",
+  "__items__": "Adding name to Items",
 
   "item.slrpmod.skero": "Skero",
   "item.slrpmod.sapphire": "Sapphire",
+  "item.slrpmod.raw_sapphire": "Raw Sapphire",
 
-  "__comment4__": "Adding name to Blocks",
+  "__tools__": "Adding name to Tools",
+
+  "item.slrpmod.metal_detector": "Metal Detector",
+
+  "__blocks__": "Adding name to Blocks",
 
   "block.slrpmod.sapphire_block": "Sapphire Block",
   "block.slrpmod.sapphire_ore": "Sapphire Ore",
   "block.slrpmod.skero_block": "Skero Block",
 
-  "__comment2__": "Adding name to Creative Tab",
+  "__creativetab__": "Adding name to Creative Tab",
 
   "creativetab.slrp_tab": "SLRP Tab",
 

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "slrpmod:palice_block"
+    }
+  ],
+  "result": {
+    "item": "slrpmod:palice",
+    "count": 9
+  },
+  "__comment1__": "basically makes 9 item from one block (shapeless crafting)"
+}

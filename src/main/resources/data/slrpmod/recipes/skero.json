@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "S#S",
+    "S#S",
+    "S#S"
+  ],
+  "key": {
+    "#": {
+      "item": "slrpmod:palice"
+    },
+    "S": {
+      "item": "minecraft:paper"
+    }
+  },
+  "result": {
+    "item": "slrpmod:skero"
+  },
+  "__comment1__": "# stand for where the items need to be and what the item is in Key part, can be changed to other symbol (shaped crafting)"
+}

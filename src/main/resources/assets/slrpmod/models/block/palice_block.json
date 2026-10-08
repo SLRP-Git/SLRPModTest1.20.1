@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "slrpmod:block/skero_block"
+    "all": "slrpmod:block/palice_block"
   }
 }

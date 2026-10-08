@@ -1,10 +1,10 @@
 {
   "type": "minecraft:smelting",
   "category": "misc",
-  "cookingtime": 20,
+  "cookingtime": 75,
   "experience": 10,
   "ingredient": {
-    "item": "slrpmod:skero_block"
+    "item": "slrpmod:raw_sapphire"
   },
-  "result": "slrpmod:skero"
+  "result": "slrpmod:sapphire"
 }

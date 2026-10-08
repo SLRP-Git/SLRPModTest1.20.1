@@ -25,7 +25,7 @@ public class ModBlocks {
     //Creates Unique Block Object sapphire_block with Properties of IronBlock with sound of Amethyst
     public static final RegistryObject<Block> SAPPHIRE_BLOCK = registryObject("sapphire_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
-    public static final RegistryObject<Block> SKERO_BLOCK = registryObject("skero_block",
+    public static final RegistryObject<Block> PALICE_BLOCK = registryObject("palice_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.AZALEA_LEAVES).sound(SoundType.AZALEA_LEAVES)));
 
     //Creates Ore Block with expirience and acting as a stone

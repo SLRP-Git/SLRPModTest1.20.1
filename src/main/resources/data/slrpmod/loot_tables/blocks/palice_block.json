@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "slrpmod:skero_block"
+          "name": "slrpmod:palice_block"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "slrpmod:blocks/skero_block"
+  "random_sequence": "slrpmod:blocks/palice_block"
 }
