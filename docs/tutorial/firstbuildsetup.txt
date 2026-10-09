@@ -1,1 +1,18 @@
-./gradlew genIntellijRuns
+- download forge mdk
+- can delete credits,changelog,License,Readme
+- load it to the project
+- let it build
+- setup gradle and minecraft to java 17! to be stable (in project settings) depends on minecraft version
+- can clean up some register and other stuff in main java
+- change mod_id remond to have it something easy because its written pretty usually
+- change ExampleMod in class to something yours with shift+F6 to change it globally
+- change package com.example.examplemod to something your like a net.yourname.modname
+- then hover over it and more actions...,  Move to new package "your name of directory(com.example.examplemod)"
+- in META-INF mods.toml you can setup your dependencies
+- in gradle.properties set mod-id as same as before, and your name of mod, and group id, also author
+- change mapping in same file, ideal parchmentMC, set it to the name and set version to the date as on their website.
+mapping_channel, and mapping_version
+- and the rest is on the website how to set it up
+- let gradle build files
+- make build gradlew build extra files ./gradlew genIntellijRuns
+- and you done :)

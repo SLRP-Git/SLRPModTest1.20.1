@@ -4,6 +4,7 @@
   "item.slrpmod.skero": "Skero",
   "item.slrpmod.sapphire": "Sapphire",
   "item.slrpmod.raw_sapphire": "Raw Sapphire",
+  "item.slrpmod.palice": "Palice",
 
   "__tools__": "Adding name to Tools",
 
@@ -13,7 +14,7 @@
 
   "block.slrpmod.sapphire_block": "Sapphire Block",
   "block.slrpmod.sapphire_ore": "Sapphire Ore",
-  "block.slrpmod.skero_block": "Skero Block",
+  "block.slrpmod.palice_block": "Palice Block",
 
   "__creativetab__": "Adding name to Creative Tab",
 
