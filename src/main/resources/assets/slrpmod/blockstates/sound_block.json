@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "slrpmod:block/sound_block"
+    }
+  }
+}

@@ -16,18 +16,26 @@ public class ModItems {
     //Register SKERO Item to ModItems
     public static final RegistryObject<Item> SKERO = ITEMS.register("skero",
             () -> new Item(new Item.Properties()));
+
     //Register SAPPHIRE Item to ModItems
     public static final RegistryObject<Item> SAPPHIRE = ITEMS.register("sapphire",
             () -> new Item(new Item.Properties()));
+
     //Register RAW SAPPHIRE Item to ModItems
     public static final RegistryObject<Item> RAW_SAPPHIRE = ITEMS.register("raw_sapphire",
             () -> new Item(new Item.Properties()));
+
     //Register PALICE Item to ModItems
     public static final RegistryObject<Item> PALICE = ITEMS.register("palice",
             () -> new Item(new Item.Properties()));
+
     //Register METALDETECTOR CUSTOM! Item to ModItems
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",
             () -> new MetalDetectorItem(new Item.Properties().durability(100)));
+
+    //Register Food
+    public static final RegistryObject<Item> RYZE_S_HOVEZIM = ITEMS.register("ryze_s_hovezim",
+            () -> new Item(new Item.Properties().food(ModFoods.RYZE_S_HOVEZIM)));
 
 
     //Register Items to main java (SLRPSHITMOD)

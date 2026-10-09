@@ -60,8 +60,14 @@ public class MetalDetectorItem extends Item {
 
     //position send to the chat of block
     private void outputValuableCoordinates(BlockPos blockPos, Player player, Block block) {
-        player.sendSystemMessage(Component.literal("Found " + I18n.get(block.getDescriptionId()) + " at " +
-                "(" + blockPos.getX() + ", " + blockPos.getY() + ", " + blockPos.getZ() + ")"));
+        player.sendSystemMessage(Component.translatable(
+                        "message.slrpmod.metal_detector.found",
+                        Component.translatable(block.getDescriptionId()),
+                        blockPos.getX(),
+                        blockPos.getY(),
+                        blockPos.getZ()
+                )
+        );
     }
 
     //what items gonna try to find

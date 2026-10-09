@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "slrpmod:item/ryze_s_hovezim"
+  }
+}

@@ -13,6 +13,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.slrp.slrpmod.SLRPSHITMOD;
+import net.slrp.slrpmod.block.special.SoundBlock;
 import net.slrp.slrpmod.items.ModItems;
 
 import java.util.function.Supplier;
@@ -33,6 +34,9 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(3,6)));
 
+    //Creates Block for Custom SoundBlock
+    public static final RegistryObject<Block> SOUND_BLOCK = registryObject("sound_block",
+            () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
     //First Register Block, Second Line Register the Block Item, Third Return The Block
     private static <T extends Block> RegistryObject<T> registryObject(String name, Supplier<T> block) {

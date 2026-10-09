@@ -29,6 +29,9 @@ public class ModCreativeTabs {
                         pOutput.accept(ModItems.RAW_SAPPHIRE.get());
                         pOutput.accept(ModItems.PALICE.get());
 
+                        //Adding Food to the tab
+                        pOutput.accept(ModItems.RYZE_S_HOVEZIM.get());
+
                         //Adding Tools to the tab
                         pOutput.accept(ModItems.METAL_DETECTOR.get());
 
@@ -36,6 +39,9 @@ public class ModCreativeTabs {
                         pOutput.accept(ModBlocks.SAPPHIRE_ORE.get());
                         pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
                         pOutput.accept(ModBlocks.PALICE_BLOCK.get());
+
+                        //Adding Custom Blocks to the tab
+                        pOutput.accept(ModBlocks.SOUND_BLOCK.get());
                     }))
                     .build());
 

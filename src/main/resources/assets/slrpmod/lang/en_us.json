@@ -6,9 +6,14 @@
   "item.slrpmod.raw_sapphire": "Raw Sapphire",
   "item.slrpmod.palice": "Palice",
 
+  "_Food_": "Adding name to Food",
+
+  "item.slrpmod.ryze_s_hovezim": "rice and meat",
+
   "__tools__": "Adding name to Tools",
 
   "item.slrpmod.metal_detector": "Metal Detector",
+  "message.slrpmod.metal_detector.found": "Found %1$s at (%2$s, %3$s, %4$s)",
 
   "__blocks__": "Adding name to Blocks",
 
@@ -16,10 +21,14 @@
   "block.slrpmod.sapphire_ore": "Sapphire Ore",
   "block.slrpmod.palice_block": "Palice Block",
 
+  "__custom blocks__": "Adding name to Blocks",
+
+  "block.slrpmod.sound_block": "Sound Block",
+
   "__creativetab__": "Adding name to Creative Tab",
 
   "creativetab.slrp_tab": "SLRP Tab",
 
 
-  "__comment1__": "Adds Name to every Item/Entity/CreativeTab/Block. Basically Manage whole language for Modded Things"
+  "__comment1__": "Adds Name to every Item/Entity/CreativeTab/Block/messages. Basically Manage whole language for Modded Things"
 }
