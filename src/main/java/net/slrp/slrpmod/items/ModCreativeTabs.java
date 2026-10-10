@@ -32,6 +32,9 @@ public class ModCreativeTabs {
                         //Adding Food to the tab
                         pOutput.accept(ModItems.RYZE_S_HOVEZIM.get());
 
+                        //Adding Fuel to the tab
+                        pOutput.accept(ModItems.PINE_CONE.get());
+
                         //Adding Tools to the tab
                         pOutput.accept(ModItems.METAL_DETECTOR.get());
 

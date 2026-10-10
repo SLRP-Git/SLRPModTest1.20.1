@@ -1,0 +1,2 @@
+fuel items work pretty similiar to item just with custom Fuel system java file. FuelItem.Java
+where is setup burntime

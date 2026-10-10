@@ -6,6 +6,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.slrp.slrpmod.SLRPSHITMOD;
+import net.slrp.slrpmod.items.tools.FuelItem;
 import net.slrp.slrpmod.items.tools.MetalDetectorItem;
 
 public class ModItems {
@@ -33,10 +34,13 @@ public class ModItems {
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",
             () -> new MetalDetectorItem(new Item.Properties().durability(100)));
 
-    //Register Food
+    //Register RYZE_S_HOVEZIM
     public static final RegistryObject<Item> RYZE_S_HOVEZIM = ITEMS.register("ryze_s_hovezim",
             () -> new Item(new Item.Properties().food(ModFoods.RYZE_S_HOVEZIM)));
 
+    //Register COAL_FUEL
+    public static final RegistryObject<Item> PINE_CONE = ITEMS.register("pine_cone",
+            () -> new FuelItem(new Item.Properties(), 400));
 
     //Register Items to main java (SLRPSHITMOD)
     public static void register(IEventBus eventBus) {

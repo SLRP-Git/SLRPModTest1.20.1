@@ -6,6 +6,10 @@
   "item.slrpmod.raw_sapphire": "Raw Sapphire",
   "item.slrpmod.palice": "Palice",
 
+  "_Fuel_": "Adding name to Fuel",
+
+  "item.slrpmod.pine_cone": "Pine Cone",
+
   "_Food_": "Adding name to Food",
 
   "item.slrpmod.ryze_s_hovezim": "rice and meat",
@@ -14,6 +18,11 @@
 
   "item.slrpmod.metal_detector": "Metal Detector",
   "message.slrpmod.metal_detector.found": "Found %1$s at (%2$s, %3$s, %4$s)",
+
+  "__tooltip__": "Adding description to ToolTip",
+
+  "tooltip.slrpmod.metal_detector.tooltip": "Can Find Ore Underground",
+  "tooltip.slrpmod.sound_block.tooltip": "Makes Sound When Right Clicked",
 
   "__blocks__": "Adding name to Blocks",
 
